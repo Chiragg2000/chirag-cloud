@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request
 from azure.ai.textanalytics import TextAnalyticsClient
 from azure.core.credentials import AzureKeyCredential
+import os
+key = os.environ.get('AZURE_TEXT_ANALYTICS_KEY')
+endpoint = os.environ.get('AZURE_TEXT_ANALYTICS_ENDPOINT')
+
 
 app = Flask(__name__)
 # Define a custom filter to find the maximum value from a list of values
