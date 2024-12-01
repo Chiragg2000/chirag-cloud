@@ -6,7 +6,7 @@ key = os.environ.get('AZURE_TEXT_ANALYTICS_KEY')
 endpoint = os.environ.get('AZURE_TEXT_ANALYTICS_ENDPOINT')
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 # Define a custom filter to find the maximum value from a list of values
 def max_value(lst):
     if isinstance(lst, list):
